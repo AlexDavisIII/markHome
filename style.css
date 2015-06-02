@@ -1,0 +1,60 @@
+/*Create a button with three dashed inside*/
+/*create left and right arrows to be clicked*/
+
+#head{
+	border-bottom: 2px solid black;	
+	border-top: 2px solid black;
+	margin: 10px;
+}
+
+#button{
+	width: 3em;
+	height: 3em;
+	background-color: green;
+	display:inline;
+}
+
+.bar{
+	margin: 3px;		
+	width: 1.5em;
+	height: 5px;
+	background-color: black;
+		
+}
+
+ul{
+	width: 50px;
+	list-style:none;
+	margin-top: 10px;
+	display:inline-block;	
+	position: absolute;
+	top:.96em;
+	left:0px;
+}
+
+h1{
+	text-align: center;
+}
+
+img {
+	display: inline;
+}
+
+#boxWrap {
+	text-align: center;
+	display: block;
+}
+
+.rightSelect{
+	position: relative;
+	bottom: 4em;
+	right: 2em;
+	font-size: 2.2em; 
+}
+
+.leftSelect{
+	position: relative;
+	bottom: 4em;
+	left: 2em;
+	font-size: 2.2em;
+}
