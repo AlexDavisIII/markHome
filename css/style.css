@@ -1,0 +1,85 @@
+/*Create a button with three dashed inside*/
+/*create left and right arrows to be clicked*/
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,500,700);
+
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  background: #e58139;
+}
+
+#boxWrap {
+	text-align: center;
+	display: block;
+}
+
+#head{
+	border-bottom: 2px solid black;	
+	border-top: 2px solid black;
+	background-color: #333; 
+	color: white;
+}
+
+
+#head h1{
+	text-align: center;
+	letter-spacing: 2px; 
+
+}
+
+#head h1:hover{
+	text-shadow: 1px 1px 3px white;
+	
+}
+
+#button{
+	width: 3em;
+	height: 3em;
+	background-color: green;
+	display:inline;
+}
+
+.bar{
+	margin: 3px;		
+	width: 1.5em;
+	height: 5px;
+	background-color: #e58139;
+		
+}
+
+.rightSelect{
+	position: relative;
+	bottom: 4em;
+	right: 2em;
+	font-size: 2.2em; 
+}
+
+.leftSelect{
+	position: relative;
+	bottom: 4em;
+	left: 2em;
+	font-size: 2.2em;
+}
+
+ul{
+	list-style:none;
+	margin-top: 10px;
+	display:inline-block;	
+	position: absolute;
+	top:.5em;
+	left:0px;
+}
+
+ul:hover .bar{
+	background-color: #FFF;
+}
+
+img {
+	display: inline;
+	font-family: Homenaje;
+}
+
