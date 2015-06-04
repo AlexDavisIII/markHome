@@ -12,6 +12,12 @@ html, body {
   background: #e58139;
 }
 
+#mover{
+	position: absolute;
+	top: 1.2em;
+	left:2em;
+}
+
 #boxWrap {
 	text-align: center;
 	display: block;
@@ -43,6 +49,11 @@ html, body {
 	display:inline;
 }
 
+#st-trigger-effects:hover button{
+	background-color: white;
+}
+
+/*
 .bar{
 	margin: 3px;		
 	width: 1.5em;
@@ -50,6 +61,11 @@ html, body {
 	background-color: #e58139;
 		
 }
+*/
+
+.btnPiece{
+	display:block;
+}	
 
 .rightSelect{
 	position: relative;
@@ -74,12 +90,22 @@ ul{
 	left:0px;
 }
 
-ul:hover .bar{
-	background-color: #FFF;
-}
-
 img {
 	display: inline;
 	font-family: Homenaje;
 }
+
+button {
+
+	margin: 3px;		
+	background-color: #e58139;
+	width: 2em;
+	border: none;
+}
+
+/*
+button:hover{
+	background-color:white;
+}
+*/
 
