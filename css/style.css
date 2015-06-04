@@ -21,6 +21,7 @@ html, body {
 #boxWrap {
 	text-align: center;
 	display: block;
+	background: #e58139;
 }
 
 #head{
