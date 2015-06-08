@@ -9,7 +9,7 @@ html, body {
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
-  background: #e58139;
+  background: rgba(22,82,22,.7);
 }
 
 #mover{
@@ -22,6 +22,8 @@ html, body {
 	text-align: center;
 	display: block;
 	background: #e58139;
+	width: 100%;
+	background: rgba(22,82,22,.7);
 }
 
 #head{
@@ -35,7 +37,6 @@ html, body {
 #head h1{
 	text-align: center;
 	letter-spacing: 2px; 
-
 }
 
 #head h1:hover{
@@ -54,15 +55,18 @@ html, body {
 	background-color: white;
 }
 
-/*
-.bar{
-	margin: 3px;		
-	width: 1.5em;
-	height: 5px;
-	background-color: #e58139;
-		
+#mover:hover{
+	cursor: pointer;
 }
-*/
+
+#mover:hover .btn{
+	background-color: rgb(22,82,22);
+}
+
+nav .optionList{
+ 	width: 100%;
+	text-align: center;
+}
 
 .btnPiece{
 	display:block;
@@ -82,6 +86,20 @@ html, body {
 	font-size: 2.2em;
 }
 
+.leftSelect:hover, .rightSelect:hover{
+	color: white;
+	cursor: pointer;
+}
+
+
+.btn{
+	margin: 3px;
+ 	width: 1.45em;
+ 	height: 5px;
+ 	background-color: white;
+	border-radius: 25%;
+}
+
 ul{
 	list-style:none;
 	margin-top: 10px;
@@ -95,18 +113,3 @@ img {
 	display: inline;
 	font-family: Homenaje;
 }
-
-button {
-
-	margin: 3px;		
-	background-color: #e58139;
-	width: 2em;
-	border: none;
-}
-
-/*
-button:hover{
-	background-color:white;
-}
-*/
-
