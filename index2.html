@@ -13,27 +13,19 @@
 
 <div id="st-container"> 
   
-  <!--Menu items on TOP of push wrapper-->
+  <!--Menu items on TOP of push wrapper for Effect 2-->
   <nav class="st-menu st-effect-2" id="menu-2">
-    <ul>
-      <li><a class="testLink" href="#">Test link</a><li>
-        <li><a class="testLink" href="#">Test link</a><li>
-        <li><a class="testLink" href="#">Test link</a><li>
-        <li><a class="testLink" href="#">Test link</a><li>
+    <ul class="optionList">
+      <li><a class="testLink" href="#">Spot 1</a></li>
+        <li><a class="testLink" href="#">Spot 2</a></li>
+	<li><a class="testLink" href="#">Spot 3</a><li>
+        <li><a class="testLink" href="#">Spot 4</a><li>
     </ul>
   </nav>
   
   <!--Content UNDER (inside) of the push wrapper-->
   <!--Content under pusher will be st-effect-7, the 3D Rotate in-->
   <div class="st-pusher">
-    <nav class="st-menu st-effect-7" id="menu-7">
-      <ul>
-        <li><a class="testLink" href="#">Test link</a><li>
-        <li><a class="testLink" href="#">Test link</a><li>
-        <li><a class="testLink" href="#">Test link</a><li>
-        <li><a class="testLink" href="#">Test link</a><li>
-      </ul>
-    </nav>
     <div class="st-content">
      <div class="st-content-inner">
      	 <div class="main clearfix">
@@ -41,17 +33,19 @@
 		  <section id="head">
 		      <h1>Title</h1>
     			<div id="mover">
+				<!--anything with class button will cause REVEAL to activate here-->
     				<div id="st-trigger-effects" class="column">
 
+					<!--Houses the button to be clicked to perform transition-->
     					<div class="button" data-effect="st-effect-2">
-					<span>barOne</span>
-      					<span>barTwo</span>
-      					<span>barThree</span>
-              </div>
-            </div>
-          </div>
+						<div class="btn"></div>
+						<div class="btn"></div>
+						<div class="btn"></div>
+	      </div> <!--end of the button-->
+            </div> <!--end of trigger effects div-->
+          </div><!--end of mover-->
 
-			</section>
+			</section><!-- end of section-->
 				
 			      <div id="boxWrap">
       				<span class="rightSelect"> &lt; </span>
