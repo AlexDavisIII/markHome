@@ -1,13 +1,38 @@
-//When the user clicks on a link, change the image in the middle of the page
-var $text = ("<div></div>"); //jquery object for div 
+//When the document is fully loaded and ready to go
+$(document).ready(function(){
+	var x = 0; //used as an incremental for the arrayOfimages
 
-//when the user clicks on a choice
-$(".optionList .testLink").click(function(){
-	//change the image src attribute to the value of the image
+	//while the end of the array has not been reached
+	/*
+	while(x <= arrayLength){
+		//so long as the x variable is equal to or greater than 0	
+		if(x >= 0){	
+			//if left arrow is clicked
+			$('.leftSelect').on('click',function(){
+				//choose the image before the current image
+				$('img').attr('src',arrayOfImages[x-1]);
+			});
+		}
+		
+		if(x >= 0){
+		$('.rightSelect').on('click',function(){
+				//choose the image before the current image
+				$('img').attr('src',arrayOfImages[x-1]);
+			});
 
-	var $theImage = $("#boxWrap img"); //selects the image in the page	
-	var $optionAttribute = $(this).attr("href"); //catures the href attribute of the option choice 
+		}
+	};*/	
+		
+	//When a list option has been clicked
+	$('.optionList li a').click(function(e){
+		e.preventDefault(); //prevents default action of opening a new window
+		var $anchorHref= $(this).attr('href');
+		
+		//set that options' href attribute to to source of the image
 
-	$($theImage).attr("src", $optionAttribute);
+		$('img').attr('src', $anchorHref); 
+			
+	}); //end of option1 click function
+}); //end of document ready function
 
-});
+
