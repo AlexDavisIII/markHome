@@ -1,28 +1,11 @@
 //When the document is fully loaded and ready to go
 $(document).ready(function(){
-	var x = 0; //used as an incremental for the arrayOfimages
+	//set the current image source to the image in the first href
+	$('img').attr('src',$('#option1').prop('href')); //used jQuery prop method o get the tagname of the first option	
 
-	//while the end of the array has not been reached
-	/*
-	while(x <= arrayLength){
-		//so long as the x variable is equal to or greater than 0	
-		if(x >= 0){	
-			//if left arrow is clicked
-			$('.leftSelect').on('click',function(){
-				//choose the image before the current image
-				$('img').attr('src',arrayOfImages[x-1]);
-			});
-		}
-		
-		if(x >= 0){
-		$('.rightSelect').on('click',function(){
-				//choose the image before the current image
-				$('img').attr('src',arrayOfImages[x-1]);
-			});
-
-		}
-	};*/	
-		
+	//if the left selector is clicked
+		//access the closest sibling to the currently selected anchor	
+	
 	//When a list option has been clicked
 	$('.optionList li a').click(function(e){
 		e.preventDefault(); //prevents default action of opening a new window
