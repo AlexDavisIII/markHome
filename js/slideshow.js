@@ -3,15 +3,15 @@ $(document).ready(function(){
 	//set the current image source to the image in the first href
 	$('img').attr('src',$('#option1').prop('href')); //used jQuery prop method o get the tagname of the first option	
 
-/*
-	//if the left selector is clicked
-		$('.leftSelect').on('click',function(){
-			//make the image source assigned to the image of the nearest sibling of the current anchor
-			$('img').attr('src', function(){
-				 $('.optionList li a').attr('href').next();
-			});
-		}); 	
-*/	
+	//when the right arrow is clicked
+		$('.rightSelect').on('click',function(){
+			var $nextSibling = $('.optionList li a').next();
+			var $nextSiblingHref = $nextSibling.attr('href');
+			//set the image source to the next anchor's href in the option list
+			console.log($nextSiblingHref);
+			$('img').attr('src', $nextSibling.attr('href'));
+		});
+
 	//When a list option has been clicked
 	$('.optionList li a').click(function(e){
 		e.preventDefault(); //prevents default action of opening a new window
