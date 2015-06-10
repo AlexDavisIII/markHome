@@ -1,16 +1,24 @@
 //When the document is fully loaded and ready to go
 $(document).ready(function(){
+	var x = 0; //used for incremental purposes.
+
 	//set the current image source to the image in the first href
 	$('img').attr('src',$('#option1').prop('href')); //used jQuery prop method o get the tagname of the first option	
-
-	//when the right arrow is clicked
+	//When the right arrow is clicked
 		$('.rightSelect').on('click',function(){
-			var $nextSibling = $('.optionList li a').next();
-			var $nextSiblingHref = $nextSibling.attr('href');
-			//set the image source to the next anchor's href in the option list
-			console.log($nextSiblingHref);
-			$('img').attr('src', $nextSibling.attr('href'));
+			//select the next sibling to the currently selected option
+			
+ 		 if(x <= 3){
+			console.log($('.optionList li a')[x]);
+			x++;
+			} else if (x >= 4) {
+				x = 0;
+			}			
 		});
+
+
+
+
 
 	//When a list option has been clicked
 	$('.optionList li a').click(function(e){
