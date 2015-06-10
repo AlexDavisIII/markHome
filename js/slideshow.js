@@ -13,10 +13,32 @@ $(document).ready(function(){
 			var $options = $('.optionList li a');
 			var $optionHref= $options[x].getAttribute("href");
 
+			console.log($options[x].getAttribute("href"));
+
 			$('img').attr('src', $optionHref);
 			x++;
 			} else if (x >= 4) {
 			x = 0;
+			}			
+			});
+
+
+
+
+		$('.leftSelect').on('click',function(){
+			//so long as you have not reached the max number of option spots
+			if(x >= 0 && x < 4 ){
+			//select the next sibling to the currently selected option
+			var $options = $('.optionList li a');
+			var $optionHref= $options[x].getAttribute("href");
+			
+			console.log($options[x].getAttribute("href"));
+
+
+			$('img').attr('src', $optionHref);
+			x--;
+			} else if (x <= -1) {
+			x = 3;
 			}			
 			});
 
