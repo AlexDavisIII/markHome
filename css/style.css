@@ -23,7 +23,7 @@ html, body {
 	display: block;
 	background: #e58139;
 	width: 100%;
-	background: rgba(22,82,22,.7);
+	background: white; 
 }
 
 #head{
