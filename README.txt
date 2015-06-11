@@ -4,3 +4,8 @@ Things included in base file (first thing pushed to gitHub)
 	- Menu Bar
 	- Title area
 	- An Image and arrow surrounding that image
+
+Things currently included
+	-Menu Bar (slides out when button on top left corner is clicked)
+	-Title area (currently with placeholder "Title")
+	-Image with arrows surrounding it that cycle through other images.
