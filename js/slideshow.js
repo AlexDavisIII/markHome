@@ -1,24 +1,26 @@
 //When the document is fully loaded and ready to go
 $(document).ready(function(){
-		var x = 0; //used for incremental purposes.
-
+		var x = 0; //used for rightSelect increments.
 
 		//set the current image source to the image in the first href
 		$('img').attr('src',$('#option1').prop('href')); //used jQuery prop method o get the tagname of the first option	
+
 		//When the right arrow is clicked
 		$('.rightSelect').on('click',function(){
-			//so long as you have not reached the max number of option spots
-			if(x <= 3){
-			//select the next sibling to the currently selected option
-			var $options = $('.optionList li a');
-			var $optionHref= $options[x].getAttribute("href");
 
-			console.log($options[x].getAttribute("href"));
-
-			$('img').attr('src', $optionHref);
 			x++;
-			} else if (x >= 4) {
-			x = 0;
+			//so long as you have not reached the max number of option spots
+			if(x>= 0 && x <= 3){
+			//select the next sibling to the currently selected option
+				var $options = $('.optionList li a');
+				var $optionHref= $options[x].getAttribute("href");
+
+				console.log($optionHref);
+				console.log(x);
+
+				$('img').attr('src', $optionHref);
+			} else {
+				x = -1;
 			}			
 			});
 
@@ -27,18 +29,21 @@ $(document).ready(function(){
 
 		$('.leftSelect').on('click',function(){
 			//so long as you have not reached the max number of option spots
-			if(x >= 0 && x < 4 ){
-			//select the next sibling to the currently selected option
-			var $options = $('.optionList li a');
-			var $optionHref= $options[x].getAttribute("href");
-			
-			console.log($options[x].getAttribute("href"));
 
-
-			$('img').attr('src', $optionHref);
 			x--;
-			} else if (x <= -1) {
-			x = 3;
+			if(x >= 0 && x < 4){
+			//select the next sibling to the currently selected option
+				var $options = $('.optionList li a');
+				var $optionHref= $options[x].getAttribute("href");
+			
+				
+				console.log($optionHref);
+				console.log(x);
+			
+
+				$('img').attr('src', $optionHref);
+			} else {
+			x = 4;
 			}			
 			});
 
