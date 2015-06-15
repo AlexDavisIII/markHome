@@ -1,0 +1,141 @@
+/*Create a button with three dashed inside*/
+/*create left and right arrows to be clicked*/
+/*LOOK INTO AUTO-Prefixer*/
+
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,500,700);
+
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  background: rgba(22,82,22,.7);
+}
+
+#mover{
+	position: absolute;
+	top: 1.2em;
+	left:2em;
+}
+
+#boxWrap {
+	text-align: center;
+	display: block;
+	width: 100%;
+}
+
+#head{
+	border-bottom: 2px solid black;	
+	border-top: 2px solid black;
+	background-color: #333; 
+	color: white;
+
+	h1{
+		text-align: center;
+		letter-spacing: 2px; 
+
+		&:hover{
+			text-shadow: 1px 1px 3px white;
+		}	
+	}
+}
+
+#button{
+	width: 3em;
+	height: 3em;
+	background-color: green;
+	display:inline;
+}
+
+#st-trigger-effects:hover button{
+	background-color: white;
+}
+
+#mover:hover{
+	cursor: pointer;
+}
+
+#mover:hover .btn{
+	transition-property: background-color;
+	transition-duration: .5s;
+	background-color: rgb(22,82,22);
+}
+
+nav .optionList{
+ 	width: 100%;
+	text-align: center;
+}
+
+.btnPiece{
+	display:block;
+}	
+
+.leftSelect{
+	position: relative;
+	bottom: 4em;
+	right: 2em;
+	font-size: 2.2em; 
+}
+
+.rightSelect{
+	position: relative;
+	bottom: 4em;
+	left: 2em;
+	font-size: 2.2em;
+}
+
+.leftSelect:hover, .rightSelect:hover{
+	transition-property: color, cursor;
+	transition-duration: .5s, .2s;
+	color: green;
+	cursor: pointer;
+}
+
+
+.btn{
+	margin: 3px;
+ 	width: 1.45em;
+ 	height: 5px;
+ 	background-color: white;
+	border-radius: 25%;
+}
+
+ul{
+	list-style:none;
+	margin-top: 10px;
+	display:inline-block;	
+	position: absolute;
+	top:.5em;
+	left:0px;
+}
+
+img {
+	width: 750px;
+	height: 350px;
+	display: inline;
+	font-family: Homenaje;
+}
+
+/*Text Content Section*/
+@mixin column-count($value){
+	-webkit-column-count: $value;
+	-moz-column-count: $value;
+	-ms-column-count: $value;
+	column-count: $value;
+}
+
+
+@mixin column-width($value){
+	-webkit-column-width: $value;
+	-moz-column-width: $value;
+	-ms-column-width: $value;
+	column-width: $value;
+}
+
+#textContent{
+	@include column-count(2);
+	@include column-width(20em);
+}

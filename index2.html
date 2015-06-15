@@ -1,11 +1,12 @@
 <!doctype html>
 <html>
 <head>
+	<meta charset="utf-8"/>
 	<title>Test Page</title>
 	<link type="text/css" rel="stylesheet" href="css/style.css"/>
 	<link type="text/css" rel="stylesheet" href="css/component.css"/>
 
-	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="js/modernizr.custom.js"></script>
 	<script type="text/javascript" src="js/slideshow.js"></script>
 
@@ -20,10 +21,10 @@
   <!--Menu items on TOP of push wrapper for Effect 2-->
   <nav class="st-menu st-effect-2" id="menu-2">
     <ul class="optionList">
-      <li><a id="option1" class="testLink" href="#">Spot 1</a></li>
-        <li><a id="option2" class="testLink" href="#">Spot 2</a></li>
-	<li><a id="option3" class="testLink" href="#">Spot 3</a><li>
-        <li><a id="option4" class="testLink" href="#">Spot 4</a><li>
+      <li><a id="option1" class="testLink" href="images/leavesWithWaterOnThem.jpg">Spot 1</a></li>
+        <li><a id="option2" class="testLink" href="images/mountainWithWater.jpg">Spot 2</a></li>
+	<li><a id="option3" class="testLink" href="images/nicepic.jpg">Spot 3</a></li>
+        <li><a id="option4" class="testLink" href="images/orcaInWater.jpg">Spot 4</a></li>
     </ul>
   </nav>
   
@@ -35,7 +36,7 @@
      	 <div class="main clearfix">
   
 		  <section id="head">
-		      <h1>Title</h1>
+		      <h1 id="pageHeader">Title</h1>
     			<div id="mover">
 				<!--anything with class button will cause REVEAL to activate here-->
     				<div id="st-trigger-effects" class="column">
@@ -45,26 +46,32 @@
 						<div class="btn"></div>
 						<div class="btn"></div>
 						<div class="btn"></div>
-	      </div> <!--end of the button-->
-            </div> <!--end of trigger effects div-->
-          </div><!--end of mover-->
+					      </div> <!--end of the button-->
+					    </div> <!--end of trigger effects div-->
+					  </div><!--end of mover-->
 
 			</section><!-- end of section-->
 				
 			      <div id="boxWrap">
-      				<span class="rightSelect"> &lt; </span>
-      				<img src="images/goodTestImage.jpeg" alt="test image">
-      				<span class="leftSelect"> &gt; </span>
-			     </div>
-			     </div>
-		     </div>
-       </div>
-      </div>
-    </div>
-   </div>
-  </div>
+      				<span class="leftSelect"> &lt; </span>
+      				<img src="#" alt="test image"/>
+      				<span class="rightSelect"> &gt; </span>
+			     </div><!-- end of div's BoxWrap-->
+			<section id='textContent'>
+				<div id='part1'>
+					<p>This page has things going on in it. Over to your right, you'll see that...there is nothing. However, to your left, you'll notice something in the top corner! That's a little thing you can click on to open a menu of all of the many(?) images available</p>
+				</div>	
+				<div id='part2'>
+					<p>Oh take a look at this! There are arrow keys on the screen for some reason. If you click on the one on the left, you go to the previous picture in our audacious, lucious, show of slides. The right does it the other way.</p>
+				</div>
+			</section><!--end of text content section-->	
+			     </div><!--end of main.clearfix-->
+		     </div><!--end of st.content.inner-->
+       </div><!--end of st-content-->
+      </div><!--end of st-pusher-->
+    </div><!--end of st-container-effects-2-->
 
 	<script src="js/classie.js"></script>
 	<script src="js/sidebarEffects.js"></script>
 </body>
-</html>
+</html> <!-- end of document-->
