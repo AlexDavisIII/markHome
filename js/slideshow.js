@@ -1,13 +1,30 @@
 //When the document is fully loaded and ready to go
 $(document).ready(function(){
+
+setPageHeader('Insert Page Title Here'); //used to set the page title
+
+/*GLOBAL VARIABLES*/
+
 		var LEFT_RESET= 4; //used to reset the right arrow 
 		var RIGHT_RESET= -1; //used to reset the left arrow
-		var x = 0; //used for incremental purposes 
+		var x = 0; //used for incremental purposes  				
 
 		//set the current image source to the image in the first href
 		$('img').attr('src',$('#option1').prop('href')); //used jQuery prop method o get the tagname of the first option	
 
 /*FUNCTIONS*/
+function getPageHeader(){
+	var textHeader = document.getElementById('pageHeader').textContent;
+
+	return textHeader;	
+}
+
+function setPageHeader(newHeader){
+ var newText = 	document.getElementById('pageHeader').textContent = newHeader;
+
+	return newText;
+}
+
 		function rightSelectClick(startingNumber){
 			//if x becomes a 3
 			 // set the x variable to -1 so it may be changed to a 0 immediately after.
