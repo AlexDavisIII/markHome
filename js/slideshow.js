@@ -1,12 +1,14 @@
 //GO TO LINE 26 for function you are currently working on
 
 
+var colors = ['"red"', '"green"', '"blue"', '"yellow"'];
+
 //When the document is fully loaded and ready to go
 $(document).ready(function(){
 
 setPageHeader('Insert Page Title Here'); //used to set the page title. Go ahead and add some text in the () and watch it work!
 
-bgColorChange('section');
+bgColorChange();
 
 
 
@@ -27,20 +29,28 @@ $('img').attr('src',$('#option1').prop('href')); //used jQuery prop method o get
 //Changes the background color of elements over a period of time
 function bgColorChange(elementName){
 	
-	var interval; //holds the interval value
 	
 	//change the colors of an element
-	$(elementName).css('background-color', function(){
+	$("#head").css('background-color', function(){
 		/*Cycle through a few colors*/		
-		var colors = ['red', 'green', 'blue', 'yellow'];
+		
+		console.log(colors[0]);
+		colors[0];
 			
+		/*
 		for(var i = 0; i <= 3; i++){
+		var interval; //holds the interval value
+
 			/*After about 500 milliseconds
 			choose a new color*/
-			interval = window.setInterval(function(){
-				colors[i];
-			}, 10); //end of interval's setInterval function
+
+			
+		/*	interval = window.setInterval(function(){
+				console.log(colors[0]);
+				colors[0];
+			}, 5000); //end of interval's setInterval function
 		}//end of for loop
+		*/
 	});	
 }
 
