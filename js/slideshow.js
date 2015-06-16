@@ -1,10 +1,11 @@
 //When the document is fully loaded and ready to go
 $(document).ready(function(){
 
-setPageHeader('Insert Page Title Here'); //used to set the page title
+setPageHeader('Insert Page Title Here'); //used to set the page title. Go ahead and add some text in the () and watch it work!
 
 /*GLOBAL VARIABLES*/
-var END_OF_IMAGE_LIST = 3; //holds max number of images
+var START_OF_IMAGE_LIST = 0; //placeholder for the start of the image list
+var END_OF_IMAGE_LIST = 3; //represents the end of the list 
 var LEFT_RESET= 4; //used to reset the right arrow 
 var RIGHT_RESET= -1; //used to reset the left arrow
 var x = 0; //used for incremental purposes  				
@@ -14,13 +15,15 @@ $('img').attr('src',$('#option1').prop('href')); //used jQuery prop method o get
 
 /*FUNCTIONS*/
 
-
+//gets what the current header is (the one at the top)
 function getPageHeader(){
 var textHeader = document.getElementById('pageHeader').textContent;
 
 return textHeader;	
 }
 
+
+//Set the main header of the page (the one at the top of the page)
 function setPageHeader(newHeader){
 var newText = 	document.getElementById('pageHeader').textContent = newHeader;
 
@@ -28,9 +31,9 @@ return newText;
 }
 
 
-//changes the image of the current slideshow
+//changes the image of the current slideshow when arrow button is clicked
+//selects the next sibling to the currently selected option
 function slider(){
-//select the next sibling to the currently selected option
 	var $options = $('.optionList li a');
 	var $optionHref= $options[x].getAttribute("href");
 
@@ -54,40 +57,45 @@ function rightSelectClick(startingNumber){
 	}
 	x++; //increments global x value by 1 to move up option list
 
-	if(x>= 0 && x <= 3){
+	if(x>= START_OF_IMAGE_LIST && x <= END_OF_IMAGE_LIST){
 		slider();	
 	}		
 }; //end of rightSelectClick function
 
+
+/*if x value is the start of the image list
+	Reset value so that the next image is the final image*/
 function leftSelectClick(startingNumber){
-	//if x ever becomes a 0
-	 //set x to become a 4 so that it may reset the cycle by capturing the image in index 3
-	if(x == 0){
+	if(x == START_OF_IMAGE_LIST){
 		x = LEFT_RESET; 	
 	}
-	x--; //decrements global x to move down option list
+	x--; //decrements global x (4) to move down option list (3)
 
-	if(x >= 0 && x <= 3){
+	if(x >= START_OF_IMAGE_LIST && x <= END_OF_IMAGE_LIST){
 		slider();
 	} 
 }; //end of leftSelectclick function
 
 /*jQuery creations*/
-//When a list option has been clicked
+
+/*After a list option has been clickedL
+	Change the main image to the selected options' href attribute*/
 $('.optionList li a').click(function(e){
-	e.preventDefault(); //prevents default action of opening a new window
-	var $anchorHref= $(this).attr('href');
+	e.preventDefault(); //prevents default action of opening new window
+	var $anchorHref= $(this).attr('href'); //gets options' href
+	$('img').attr('src', $anchorHref); //set attribute to image 
 
-	//set that options' href attribute to to source of the image
-	$('img').attr('src', $anchorHref); 
+}); //end of image click function
 
-}); //end of option1 click function
-
-//When the right arrow is clicked
+/*When the right arrow is clicked
+	Choose the image after the current*/
 $('.rightSelect').on('click',function(){
 	rightSelectClick(x);	
 }); //end of rightSelect onClick function
 
+
+/*When the left arrow is clicked
+	Chose the image before the current image*/
 $('.leftSelect').on('click',function(){
 	leftSelectClick(x);	
 }); //end of leftSelect onClick function
