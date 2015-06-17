@@ -1,7 +1,7 @@
 //GO TO LINE 26 for function you are currently working on
 
 
-var colors = ['"red"', '"green"', '"blue"', '"yellow"'];
+var colors = ['red', 'green', 'blue', 'yellow'];
 
 //When the document is fully loaded and ready to go
 $(document).ready(function(){
@@ -11,46 +11,43 @@ setPageHeader('Insert Page Title Here'); //used to set the page title. Go ahead 
 bgColorChange();
 
 
-
 /*GLOBAL VARIABLES*/
 var START_OF_IMAGE_LIST = 0; //placeholder for the start of the image list
 var END_OF_IMAGE_LIST = 3; //represents the end of the list 
 var LEFT_RESET= 4; //used to reset the right arrow 
 var RIGHT_RESET= -1; //used to reset the left arrow
 var x = 0; //used for incremental purposes  				
+var colorIterator = 0; //used for color iterator for bgColorChange function
+var interval; //holds the interval value
+
+/*After about 500 milliseconds
+choose a new color*/
+interval = window.setInterval(bgColorChange, 5000); //end of interval's setInterval function
+
 
 //set the current image source to the image in the first href
 $('img').attr('src',$('#option1').prop('href')); //used jQuery prop method o get the tagname of the first option	
 
 /*FUNCTIONS*/
 
-
 //CURRENTLY WORKING ON THIS FUNCTION
 //Changes the background color of elements over a period of time
-function bgColorChange(elementName){
+function bgColorChange(){
 	
 	
 	//change the colors of an element
-	$("#head").css('background-color', function(){
-		/*Cycle through a few colors*/		
-		
-		console.log(colors[0]);
-		colors[0];
-			
-		/*
-		for(var i = 0; i <= 3; i++){
-		var interval; //holds the interval value
+	$("#head").css('background-color', function(color){
+	/*Cycle through a few colors*/		
+		console.log(colors[colorIterator]);
+		if(colorIterator <= colors.length){
+			color =	colors[colorIterator];
+			colorIterator++;	
+			return color;
 
-			/*After about 500 milliseconds
-			choose a new color*/
-
-			
-		/*	interval = window.setInterval(function(){
-				console.log(colors[0]);
-				colors[0];
-			}, 5000); //end of interval's setInterval function
-		}//end of for loop
-		*/
+		}else if(colorIterator > colors.length){
+			colorIterator = -1;
+		}
+	
 	});	
 }
 
