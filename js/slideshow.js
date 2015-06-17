@@ -8,8 +8,6 @@ $(document).ready(function(){
 
 setPageHeader('Insert Page Title Here'); //used to set the page title. Go ahead and add some text in the () and watch it work!
 
-bgColorChange();
-
 
 /*GLOBAL VARIABLES*/
 var START_OF_IMAGE_LIST = 0; //placeholder for the start of the image list
@@ -37,15 +35,18 @@ function bgColorChange(){
 	
 	//change the colors of an element
 	$("#head").css('background-color', function(color){
-	/*Cycle through a few colors*/		
-		console.log(colors[colorIterator]);
-		if(colorIterator <= colors.length){
+		/*Transition to the next color if:
+			the colorIterator variable is less than or equal to the length of the array
+			*/
+		console.dir('Position: '+ colorIterator +' Color: ' + colors[colorIterator]);
+		console.dir(colors.length);
+		if(colorIterator >= colors.length){
+			colorIterator = 0;
+		}else if(colorIterator < colors.length){
 			color =	colors[colorIterator];
 			colorIterator++;	
 			return color;
 
-		}else if(colorIterator > colors.length){
-			colorIterator = -1;
 		}
 	
 	});	
