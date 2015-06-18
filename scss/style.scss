@@ -32,7 +32,6 @@ html, body {
 	border-top: 2px solid black;
 	background-color: #333; 
 	color: white;
-
 	h1{
 		text-align: center;
 		letter-spacing: 2px; 
@@ -135,7 +134,3 @@ img {
 	column-width: $value;
 }
 
-#textContent{
-	@include column-count(2);
-	@include column-width(20em);
-}
