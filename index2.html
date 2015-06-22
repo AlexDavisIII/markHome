@@ -5,10 +5,10 @@
 	<title>Test Page</title>
 	<link type="text/css" rel="stylesheet" href="css/style.css"/>
 	<link type="text/css" rel="stylesheet" href="css/component.css"/>
-
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="js/modernizr.custom.js"></script>
-	<script type="text/javascript" src="js/slideshow.js"></script>
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/slideshow.js"></script>
+	<script src="js/ajax.js"></script>
 
 </head>
 <body>
@@ -60,10 +60,10 @@
 			<section id='textContent'>
 				<div id='part1'>
 				<div class='imageHolder'></div><!--Placeholder for where images will soon belong-->
-					<p class='textParagraph'>This page has things going on in it. Over to your right, you'll see that...there is nothing. However, to your left, you'll notice something in the top corner! That's a little thing you can click on to open a menu of all of the many(?) images available</p>
+					<p id='firstDescription' class='textParagraph'><!--insert text via AJAX--></p>
 				</div>	
 				<div id='part2'>
-					<p class='textParagraph'>Oh take a look at this! There are arrow keys on the screen for some reason. If you click on the one on the left, you go to the previous picture in our audacious, lucious, show of slides. The right does it the other way.</p>
+					<p id='secondDescription' class='textParagraph'><!--insert text via AJAX--></p>
 				<div class='imageHolder'></div><!--Placeholder for where images will soon belong-->
 				</div>
 			</section><!--end of text content section-->	

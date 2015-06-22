@@ -1,7 +1,7 @@
 //GO TO LINE 26 for function you are currently working on
 
 
-var colors = ['red', 'green', 'blue', 'yellow'];
+var colors = ['#009900', '#007F00', '#006600', '#004c00'];
 
 //When the document is fully loaded and ready to go
 $(document).ready(function(){
