@@ -1,14 +1,14 @@
 $(document).ready(function(){
-	var url1 = "test/description1.html";
-	var url2 = "test/description2.html";
+	var url1 = 'descriptions/description.html';
 
-	$('#firstDescription').load(url1, function(){
-		alert('cool');
+	$('#textContent').load(url1, function(){
+		$(this).hide();
+		$('#textContent #description').hide();
 		console.log("this finished");
+		$(this).show('slow', function(){
+			$(this).ready(function(){
+				$('#textContent #description').slideDown('slow');
+			}); //end of ready function
+		}); //end of show function
 	});//end of the firstDescription load function
-
-	$('#secondDescription').load(url2, function(){
-		alert('cools');
-		console.log("now THIS one worked");
-	});//end of secondDescription load function
 });//when the document is ready to go
