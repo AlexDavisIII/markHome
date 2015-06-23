@@ -9,3 +9,5 @@ Things currently included
 	-Menu Bar (slides out when button on top left corner is clicked)
 	-Title area (currently with placeholder "Title")
 	-Image with arrows surrounding it that cycle through other images.
+
+Area for the description of the page itself has been added!
