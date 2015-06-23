@@ -95,15 +95,20 @@ img {
   display: inline;
   font-family: Homenaje; }
 
-/*Text Content Section*/
-#textContent {
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-  -ms-column-count: 2;
-  column-count: 2;
-  -webkit-column-width: 20em;
-  -moz-column-width: 20em;
-  -ms-column-width: 20em;
-  column-width: 20em; }
+/*Captures all children in part1*/
+#part1{
+	display: table; 
+}
 
-/*# sourceMappingURL=style.css.map */
+p{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/*Text Content Section*/
+.imageHolder{
+	display: table-cell; 
+	background-color: white;
+	width: 10em;
+	height: 10em;
+}
