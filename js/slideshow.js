@@ -1,7 +1,8 @@
 //GO TO LINE 26 for function you are currently working on
 
-
+/*
 var colors = ['#009900', '#007F00', '#006600', '#004c00'];
+*/
 
 //When the document is fully loaded and ready to go
 $(document).ready(function(){
@@ -21,8 +22,9 @@ var interval; //holds the interval value
 setPageHeader('Insert Page Title Here'); //used to set the page title. Go ahead and add some text in the () and watch it work!
 
 /*After about 500 milliseconds choose a new color*/
+/*
 interval = window.setInterval(bgColorChange, 5000); //end of interval's setInterval function
-
+*/
 
 //set the current image source to the image in the first href
 $('img').attr('src',$('#option1').prop('href')); //used jQuery prop method o get the tagname of the first option	
@@ -41,12 +43,14 @@ $('#part1, #part2').slideDown('1500',function(){
 */
 
 //Changes the background color of elements over a period of time
+/*
 function bgColorChange(){
 	//change the colors of an element
 	$("#head").css('background-color', function(color){
 		/*Transition to the next color if:
 			the colorIterator variable is less than or equal to the length of the array
 			*/
+/*
 		console.dir('Position: '+ colorIterator +' Color: ' + colors[colorIterator]);
 		console.dir(colors.length);
 		if(colorIterator >= colors.length){
@@ -60,6 +64,7 @@ function bgColorChange(){
 	});//end of #head color change function	
 }//end of bgColorChange function 
 
+*/
 
 //gets what the current header is (the one at the top)
 function getPageHeader(){
